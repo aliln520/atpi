@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GetmerchUI — Modern iOS Liquid Glass Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="workspace">
+    <!-- Narrow-Screen Quick Jump Bar -->
+    <div class="mobile-bar">
+      <strong style="font-size:12.5px;">GetmerchUI iOS</strong>
+      <select id="mobileJumpSelect" aria-label="Pilih Halaman Prototipe">
+        <option value="welcome">Slide 1–3: Welcome</option>
+        <option value="about">Slide 4–11: About Us</option>
+        <option value="our-products">Slide 12: Our Products</option>
+        <option value="registration">Slide 13–16: Registration</option>
+        <option value="signup-role">Slide 17–21: Sign Up</option>
+        <option value="login-role">Slide 22–29: Login &amp; OTP</option>
+        <option value="home-customer">Slide 30–39: Customer App</option>
+        <option value="home-seller">Slide 40–53: Seller App</option>
+        <option value="faq">Slide 54: FAQ</option>
+        <option value="seller-promo">Slide 55: Promo Edit</option>
+      </select>
+    </div>
+
+    <!-- Desktop Prototype Navigator Sidebar -->
+    <aside class="proto-sidebar" aria-label="Navigasi Prototipe GetmerchUI">
+      <div class="proto-brand">
+        <div class="proto-badge">UI</div>
+        <div>
+          <h1>GetmerchUI</h1>
+          <p>iOS Liquid Glass (55 Slide)</p>
+        </div>
+      </div>
+
+      <div class="slide-tracker">
+        <div class="slide-tracker-top">
+          <span id="sidebarSlideBadge">SLIDE 1 / 55</span>
+          <span id="sidebarRoleBadge">GUEST</span>
+        </div>
+        <div class="slide-tracker-name" id="sidebarScreenTitle">Welcome — About Us</div>
+      </div>
+
+      <div class="role-switch-row">
+        <button type="button" class="role-btn" id="quickCustomerBtn">Customer</button>
+        <button type="button" class="role-btn" id="quickSellerBtn">Seller</button>
+      </div>
+
+      <div class="jump-list">
+        <button type="button" class="jump-btn active" data-jump="welcome"><span>Welcome Carousel</span><span class="jump-tag">1–3</span></button>
+        <button type="button" class="jump-btn" data-jump="about"><span>About Us &amp; Founders</span><span class="jump-tag">4–11</span></button>
+        <button type="button" class="jump-btn" data-jump="our-products"><span>Our Products (Publik)</span><span class="jump-tag">12</span></button>
+        <button type="button" class="jump-btn" data-jump="registration"><span>Registration</span><span class="jump-tag">13–16</span></button>
+        <button type="button" class="jump-btn" data-jump="signup-role"><span>Sign Up Seller / Cust</span><span class="jump-tag">17–21</span></button>
+        <button type="button" class="jump-btn" data-jump="login-role"><span>Login, OTP &amp; Reset</span><span class="jump-tag">22–29</span></button>
+        <button type="button" class="jump-btn" data-jump="home-customer"><span>Customer Home &amp; Order</span><span class="jump-tag">30–39</span></button>
+        <button type="button" class="jump-btn" data-jump="home-seller"><span>Seller Home &amp; Result</span><span class="jump-tag">40–53</span></button>
+        <button type="button" class="jump-btn" data-jump="faq"><span>FAQ</span><span class="jump-tag">54</span></button>
+        <button type="button" class="jump-btn" data-jump="seller-promo"><span>Product Promotion Edit</span><span class="jump-tag">55</span></button>
+      </div>
+    </aside>
+
+    <!-- ======================================================================
+         MOBILE iOS LIQUID GLASS FRAME
+         ====================================================================== -->
+    <main class="phone-frame" aria-label="Aplikasi GetmerchUI iOS Liquid Glass">
+      <!-- Ambient Floating iOS Glass Bubbles -->
+      <div class="ios-bubbles-bg" aria-hidden="true">
+        <div class="ios-bubble b1"></div>
+        <div class="ios-bubble b2"></div>
+        <div class="ios-bubble b3"></div>
+        <div class="ios-bubble b4"></div>
+        <div class="ios-bubble b5"></div>
+      </div>
+
+      <canvas id="confettiCanvas"></canvas>
+
+      <!-- Status Bar 06.01 + Dynamic Island -->
+      <div class="status-bar">
+        <span>06.01</span>
+        <div class="dynamic-island" aria-hidden="true"></div>
+        <div class="status-icons" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1.2" fill="currentColor"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="14" width="3" height="7" rx="1"/><rect x="7" y="10" width="3" height="11" rx="1"/><rect x="12" y="6" width="3" height="15" rx="1"/><rect x="17" y="2" width="3" height="19" rx="1"/></svg>
+          <svg width="21" height="13" viewBox="0 0 24 14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="2" width="18" height="10" rx="3"/><rect x="3.5" y="4.2" width="13" height="5.6" rx="1.5" fill="currentColor"/><path d="M21 5.2v3.6" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+
+      <div class="viewport" id="viewport">
+
+        <!-- ==================== SLIDE 1–3: WELCOME ==================== -->
+        <section class="screen active" id="screen-welcome">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px;">
+            <div>
+              <div class="welcome-kicker">Universitas Indonesia</div>
+              <div class="welcome-title">GetmerchUI</div>
+            </div>
+            <button type="button" class="back-pill" data-nav="faq" aria-label="Bantuan FAQ" style="padding:7px 11px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>FAQ</span>
+            </button>
+          </div>
+
+          <div class="welcome-stage" id="welcomeSwipeArea">
+            <div class="welcome-hero-card" id="welcomeCardBtn" role="button" tabindex="0">
+              <div class="welcome-visual-wrap float-anim" id="welcomeVisualBox"></div>
+              <div>
+                <div style="display:inline-flex;align-items:center;gap:6px;background:var(--grad-gold);padding:5px 14px;border-radius:999px;font-size:12.5px;font-weight:800;margin-bottom:8px;box-shadow:0 4px 10px rgba(180,123,0,0.2);" id="welcomePillLabel">About Us</div>
+                <p id="welcomeDescText" style="font-size:13px;color:var(--ink-soft);line-height:1.48;max-width:270px;"></p>
+              </div>
+            </div>
+
+            <div class="carousel-nav-row">
+              <button type="button" class="circle-arrow" id="welcomePrevBtn" aria-label="Sebelumnya">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="dots-row" id="welcomeDots">
+                <button type="button" class="dot-pill active" data-wdot="0" aria-label="Slide 1"></button>
+                <button type="button" class="dot-pill" data-wdot="1" aria-label="Slide 2"></button>
+                <button type="button" class="dot-pill" data-wdot="2" aria-label="Slide 3"></button>
+              </div>
+              <button type="button" class="circle-arrow" id="welcomeNextBtn" aria-label="Berikutnya">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;padding-bottom:6px;">
+              <button type="button" class="ios-btn ios-btn-primary" data-nav="registration">
+                <span>Registration</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+              <button type="button" class="text-link" data-nav="faq">Do you have any question?</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 4–11: ABOUT US (TANPA LOGIN) ==================== -->
+        <section class="screen" id="screen-about">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="welcome">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <span class="glass-badge" id="founderSlideCounter">Slide 4 / 11</span>
+          </div>
+
+          <h2 class="screen-title">About Us</h2>
+          <p class="screen-sub">Official Campus Merch Hub — Universitas Indonesia</p>
+
+          <div class="glass-card" style="font-size:13.5px;line-height:1.58;color:var(--ink-soft);display:flex;flex-direction:column;gap:10px;margin-bottom:18px;">
+            <p style="font-weight:700;color:var(--ink);font-size:15px;">Hello!</p>
+            <p>Getmerchui combines "Get," "Merchandise," and "UI," signifying the act of obtaining UI merchandise. It reflects our goal to help buyers easily discover and acquire the products they want.</p>
+            <p>We are a digital promotion service for Universitas Indonesia's academic community, helping organizations and committees promote their merchandise and webinar tickets to reach a wider campus audience.</p>
+          </div>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;padding:0 4px;">
+            <h3 style="font-family:var(--font-display);font-size:17px;font-weight:800;">Meet The Founder!</h3>
+            <span style="font-size:11.5px;color:var(--muted);font-weight:600;">9 Founders</span>
+          </div>
+
+          <div class="founders-row">
+            <button type="button" class="circle-arrow" id="founderPrevBtn" aria-label="Founder sebelumnya" style="width:32px;height:32px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="founders-pair" id="foundersPair"></div>
+            <button type="button" class="circle-arrow" id="founderNextBtn" aria-label="Founder berikutnya" style="width:32px;height:32px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="dots-row" id="founderDots" style="margin-top:12px;">
+            <span class="dot-pill active"></span>
+            <span class="dot-pill"></span>
+            <span class="dot-pill"></span>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 12: OUR PRODUCTS (TANPA LOGIN) ==================== -->
+        <section class="screen" id="screen-our-products">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="welcome">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <span class="glass-badge">Akses Publik</span>
+          </div>
+          <h2 class="screen-title">Our Products</h2>
+          <p class="screen-sub">Jelajahi koleksi merchandise terbaru UI tanpa perlu login</p>
+          <div class="grid-2" id="ourProductsGrid"></div>
+        </section>
+
+        <!-- ==================== SLIDE 13–16: REGISTRATION ==================== -->
+        <section class="screen" id="screen-registration">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="welcome">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;text-align:center;">
+            <div class="ios-icon-squircle float-anim" style="width:116px;height:116px;border-radius:34px;">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <polyline points="16 11 18 13 22 9" stroke="#B47B00" stroke-width="2.2"/>
+              </svg>
+            </div>
+            <div>
+              <h2 class="screen-title">Registration</h2>
+              <p class="screen-sub" style="max-width:270px;margin:0 auto;">Masuk atau buat akun untuk mulai berbelanja merchandise UI maupun membuka toko organisasi.</p>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:11px;padding-bottom:16px;">
+            <button type="button" class="ios-btn ios-btn-primary" data-nav="login-role">Login</button>
+            <button type="button" class="ios-btn ios-btn-glass" data-nav="signup-role">Sign Up</button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 17: SIGN UP ROLE ==================== -->
+        <section class="screen" id="screen-signup-role">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="registration">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">Sign Up</h2>
+          <p class="screen-sub">Choose according to your needs</p>
+
+          <div class="role-pair">
+            <button type="button" class="role-glass-card" data-nav="signup-seller">
+              <img class="float-anim" src="images/ios_seller.jpg" alt="Seller" />
+              <div style="font-size:15px;font-weight:800;">Seller</div>
+              <div style="font-size:11.5px;color:var(--muted);">Organisasi &amp; Event</div>
+            </button>
+            <button type="button" class="role-glass-card" data-nav="signup-customer">
+              <img class="float-anim" src="images/ios_customer.jpg" alt="Customer" />
+              <div style="font-size:15px;font-weight:800;">Customer</div>
+              <div style="font-size:11.5px;color:var(--muted);">Civitas UI &amp; Umum</div>
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 18–19: SIGN UP SELLER ==================== -->
+        <section class="screen" id="screen-signup-seller">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="signup-role">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">Sign Up Seller</h2>
+          <p class="screen-sub">Note: Enter the correct data</p>
+
+          <form class="glass-card" id="signupSellerForm">
+            <div class="field-group"><label class="field-label" for="suSName">Name</label><input class="ios-input" id="suSName" type="text" placeholder="Nama lengkap penanggung jawab" required /></div>
+            <div class="field-group"><label class="field-label" for="suSEmail">Email</label><input class="ios-input" id="suSEmail" type="email" placeholder="organisasi@ui.ac.id" required /></div>
+            <div class="field-group"><label class="field-label" for="suSPass">Password</label><input class="ios-input" id="suSPass" type="password" placeholder="Minimal 6 karakter" required /></div>
+            <div class="field-group"><label class="field-label" for="suSPhone">Phone number</label><input class="ios-input" id="suSPhone" type="tel" placeholder="08xxxxxxxxxx" required /></div>
+            <div class="field-group">
+              <label class="field-label" for="suSAcc">Account for</label>
+              <select class="ios-select" id="suSAcc">
+                <option value="Organization">Organization</option>
+                <option value="Event">Event</option>
+              </select>
+            </div>
+            <div class="field-group"><label class="field-label" for="suSOrg">Organization / Event name</label><input class="ios-input" id="suSOrg" type="text" placeholder="Contoh: BEM UI / Proker A" required /></div>
+
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;">
+              <button type="submit" class="ios-btn ios-btn-primary">Save an Account</button>
+              <button type="reset" class="ios-btn ios-btn-glass">Reset</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- ==================== SLIDE 20–21: SIGN UP CUSTOMER ==================== -->
+        <section class="screen" id="screen-signup-customer">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="signup-role">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <button type="button" class="back-pill" data-nav="home-customer">Next &rsaquo;</button>
+          </div>
+          <h2 class="screen-title">Sign Up Customer</h2>
+          <p class="screen-sub">Note: Enter the correct data</p>
+
+          <form class="glass-card" id="signupCustomerForm">
+            <div class="field-group"><label class="field-label" for="suCName">Name</label><input class="ios-input" id="suCName" type="text" placeholder="Nama lengkap Anda" required /></div>
+            <div class="field-group"><label class="field-label" for="suCEmail">Email</label><input class="ios-input" id="suCEmail" type="email" placeholder="nama@ui.ac.id" required /></div>
+            <div class="field-group"><label class="field-label" for="suCPass">Password</label><input class="ios-input" id="suCPass" type="password" placeholder="Minimal 6 karakter" required /></div>
+            <div class="field-group"><label class="field-label" for="suCPhone">Phone number</label><input class="ios-input" id="suCPhone" type="tel" placeholder="08xxxxxxxxxx" required /></div>
+            <div class="field-group">
+              <label class="field-label" for="suCAcc">Account for</label>
+              <select class="ios-select" id="suCAcc">
+                <option value="Civitas Akademik UI">Civitas Akademik UI</option>
+                <option value="General">General</option>
+              </select>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;">
+              <button type="submit" class="ios-btn ios-btn-primary">Save an Account</button>
+              <button type="reset" class="ios-btn ios-btn-glass">Reset</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- ==================== SLIDE 22 & 29: LOG IN ROLE ==================== -->
+        <section class="screen" id="screen-login-role">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="registration">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">Log in</h2>
+          <p class="screen-sub">Choose according to your needs</p>
+
+          <div class="role-pair">
+            <button type="button" class="role-glass-card" id="chooseLoginSellerBtn">
+              <img class="float-anim" src="images/ios_seller.jpg" alt="Seller" />
+              <div style="font-size:15px;font-weight:800;">Seller</div>
+              <div style="font-size:11.5px;color:var(--muted);">Kelola Katalog &amp; Toko</div>
+            </button>
+            <button type="button" class="role-glass-card" id="chooseLoginCustomerBtn">
+              <img class="float-anim" src="images/ios_customer.jpg" alt="Customer" />
+              <div style="font-size:15px;font-weight:800;">Customer</div>
+              <div style="font-size:11.5px;color:var(--muted);">Belanja Merchandise</div>
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 23–24: LOGIN FORM ==================== -->
+        <section class="screen" id="screen-login-form">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="login-role">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <span class="glass-badge" id="loginRoleChip">Customer</span>
+          </div>
+
+          <div style="margin:12px 0 18px;text-align:center;">
+            <div class="ios-icon-squircle navy float-anim" style="margin-bottom:14px;">
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h2 class="screen-title">Login</h2>
+            <p class="screen-sub" style="margin-bottom:0;">Masuk ke akun GetmerchUI Anda</p>
+          </div>
+
+          <form class="glass-card" id="loginForm" style="display:flex;flex-direction:column;gap:12px;">
+            <div class="field-group" style="margin:0;">
+              <label class="field-label" for="loginUser">Username</label>
+              <input class="ios-input" id="loginUser" type="text" placeholder="Username" value="mahasiswa.ui" required />
+            </div>
+            <div class="field-group" style="margin:0;">
+              <label class="field-label" for="loginPass">Password</label>
+              <div class="pass-wrap">
+                <input class="ios-input" id="loginPass" type="password" placeholder="Password" value="123456" required style="padding-right:40px;" />
+                <button type="button" class="pass-toggle" id="toggleLoginPass" aria-label="Tampilkan password">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+              </div>
+            </div>
+            <button type="submit" class="ios-btn ios-btn-primary" style="margin-top:4px;">Login</button>
+            <div style="text-align:center;">
+              <button type="button" class="text-link" data-nav="forgot-password">Forgot your password?</button>
+            </div>
+          </form>
+
+          <div style="margin-top:auto;text-align:center;font-size:13px;color:var(--ink-soft);padding-top:16px;">
+            Belum punya akun? <button type="button" style="font-weight:800;color:var(--ink);" data-nav="signup-role">Sign up</button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 25: FORGOT PASSWORD ==================== -->
+        <section class="screen" id="screen-forgot-password">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="login-form">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+
+          <div style="margin:20px 0;text-align:center;">
+            <div class="ios-icon-squircle float-anim" style="margin-bottom:14px;">
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            </div>
+            <h2 class="screen-title">Forgot Password</h2>
+            <p class="screen-sub" style="margin-bottom:0;">Kami akan mengirimkan 4 digit kode OTP ke email Anda</p>
+          </div>
+
+          <form class="glass-card" id="forgotForm" style="display:flex;flex-direction:column;gap:12px;">
+            <div class="field-group" style="margin:0;">
+              <label class="field-label" for="forgotEmail">Email address</label>
+              <input class="ios-input" id="forgotEmail" type="email" placeholder="nama@ui.ac.id" required />
+            </div>
+            <button type="submit" class="ios-btn ios-btn-primary">Send Code</button>
+          </form>
+
+          <div style="margin-top:auto;text-align:center;font-size:13px;padding-top:16px;">
+            <button type="button" class="text-link" data-nav="login-form">Go Back To Sign in</button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 26: ENTER YOUR OTP ==================== -->
+        <section class="screen" id="screen-otp">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="forgot-password">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+
+          <div style="text-align:center;margin-bottom:6px;">
+            <div class="ios-icon-squircle sm" style="margin-bottom:10px;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h2 class="screen-title">Enter Your OTP</h2>
+            <p class="screen-sub" style="margin-bottom:0;">Masukkan 4 digit kode verifikasi</p>
+          </div>
+
+          <div class="otp-row" id="otpBoxes">
+            <div class="otp-cell current"></div>
+            <div class="otp-cell"></div>
+            <div class="otp-cell"></div>
+            <div class="otp-cell"></div>
+          </div>
+
+          <button type="button" class="ios-btn ios-btn-primary" id="verifyOtpBtn" style="margin-bottom:16px;">Verify</button>
+
+          <div class="ios-keypad" id="otpKeypad">
+            <button type="button" class="ios-key" data-key="7">7</button>
+            <button type="button" class="ios-key" data-key="8">8</button>
+            <button type="button" class="ios-key" data-key="9">9</button>
+            <button type="button" class="ios-key" data-key="4">4</button>
+            <button type="button" class="ios-key" data-key="5">5</button>
+            <button type="button" class="ios-key" data-key="6">6</button>
+            <button type="button" class="ios-key" data-key="1">1</button>
+            <button type="button" class="ios-key" data-key="2">2</button>
+            <button type="button" class="ios-key" data-key="3">3</button>
+            <button type="button" class="ios-key" data-key=".">.</button>
+            <button type="button" class="ios-key" data-key="0">0</button>
+            <button type="button" class="ios-key" data-key="del" aria-label="Hapus">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><line x1="18" y1="9" x2="12" y2="15"/><line x1="12" y1="9" x2="18" y2="15"/></svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 27–28: RESET PASSWORD ==================== -->
+        <section class="screen" id="screen-reset-password">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="otp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+
+          <div style="margin:18px 0;text-align:center;">
+            <div class="ios-icon-squircle float-anim" style="margin-bottom:14px;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+            </div>
+            <h2 class="screen-title">Reset Password</h2>
+            <p class="screen-sub" style="margin-bottom:0;">Buat kata sandi baru untuk akun Anda</p>
+          </div>
+
+          <form class="glass-card" id="resetPassForm" style="display:flex;flex-direction:column;gap:12px;">
+            <input class="ios-input" id="newPassInput" type="password" placeholder="New Password" required />
+            <input class="ios-input" id="confirmPassInput" type="password" placeholder="Confirm Password" required />
+            <button type="submit" class="ios-btn ios-btn-primary">Reset Password</button>
+          </form>
+        </section>
+
+        <!-- ==================== SLIDE 30 & 40: HOME ==================== -->
+        <section class="screen" id="screen-home">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+            <div>
+              <div class="welcome-kicker" id="homeRoleKicker">Universitas Indonesia</div>
+              <div class="welcome-title">GetmerchUI</div>
+            </div>
+            <div style="display:flex;gap:6px;align-items:center;">
+              <button type="button" class="back-pill" id="homeFavBtn" data-nav="customer-favorites" style="padding:7px 10px;color:var(--danger);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <span id="homeFavCount">0</span>
+              </button>
+              <button type="button" class="back-pill" data-nav="faq" style="padding:7px 10px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span>FAQ</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Banner tersinkronisasi dengan Add Banner pada New Arrivals Seller -->
+          <div id="homeBannerClick" style="position:relative;border-radius:24px;overflow:hidden;border:1.2px solid rgba(255,255,255,0.85);box-shadow:var(--glass-shadow);margin-bottom:16px;cursor:pointer;">
+            <img id="homeBannerImg" src="images/ios_banner.jpg" alt="GetmerchUI Merch Banner" style="width:100%;height:136px;object-fit:cover;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(24,24,27,0.62) 0%, rgba(24,24,27,0.10) 70%);display:flex;flex-direction:column;justify-content:flex-end;padding:14px 16px;">
+              <span id="homeBannerKicker" style="font-size:10px;font-weight:800;letter-spacing:0.08em;color:#FDE047;text-transform:uppercase;">New Arrival &bull; 20/05/2027 – 27/05/2027</span>
+              <span style="font-family:var(--font-display);font-size:16px;font-weight:800;color:#FFF;" id="homeBannerTitle">Produk A — New Arrival</span>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;padding:0 2px;">
+            <h3 style="font-family:var(--font-display);font-size:18px;font-weight:800;">New Product</h3>
+            <button type="button" class="text-link" id="homeSeeAllBtn" style="font-size:12.5px;color:var(--accent-gold);font-weight:700;">Lihat semua &rsaquo;</button>
+          </div>
+          <div class="grid-2" id="homeNewProductsGrid"></div>
+        </section>
+
+        <!-- ==================== SLIDE 31–35 & 45–49: PROFILE ==================== -->
+        <section class="screen" id="screen-profile">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="home">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <span class="glass-badge" id="profileRoleBadge">Customer</span>
+          </div>
+          <h2 class="screen-title">Profile</h2>
+
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin:6px 0 14px;">
+            <input type="file" id="profilePhotoInput" accept="image/*" style="display:none;" />
+            <div class="ios-icon-squircle navy" id="profileAvatarBox" style="width:92px;height:92px;border-radius:50%;overflow:hidden;position:relative;">
+              <img id="profileAvatarImg" alt="Foto Profil" style="display:none;width:100%;height:100%;object-fit:cover;" />
+              <svg id="profileAvatarSvg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <button type="button" class="back-pill" id="changePhotoBtn" style="font-size:12px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Change Photo</span>
+            </button>
+          </div>
+
+          <form class="glass-card" id="profileForm">
+            <div class="field-group"><label class="field-label" for="profFullName">Full Name</label><input class="ios-input" id="profFullName" type="text" value="Adisa Rahma Dillah" required /></div>
+            <div class="field-group"><label class="field-label" for="profEmail">Email</label><input class="ios-input" id="profEmail" type="email" value="adisa.rahma@ui.ac.id" required /></div>
+            <div class="field-group"><label class="field-label" for="profPhone">Phone Number</label><input class="ios-input" id="profPhone" type="tel" value="085774707438" required /></div>
+            <div class="field-group"><label class="field-label" for="profAccountFor">Account For</label><input class="ios-input" id="profAccountFor" type="text" value="Civitas Akademik UI" required /></div>
+            <div class="field-group" id="profStoreGroup" style="display:none;"><label class="field-label" for="profStoreName">Store / Organization Name</label><input class="ios-input" id="profStoreName" type="text" value="Organisasi A" /></div>
+
+            <div style="display:flex;flex-direction:column;gap:9px;margin-top:14px;">
+              <button type="submit" class="ios-btn ios-btn-primary">Save Change</button>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <button type="button" class="ios-btn ios-btn-glass" id="logoutTriggerBtn">Log Out</button>
+                <button type="button" class="ios-btn ios-btn-danger" id="deleteAccTriggerBtn">Delete Account</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- ==================== SLIDE 36: CUSTOMER PRODUCT CATALOG ==================== -->
+        <section class="screen" id="screen-customer-catalog">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="home">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">Product Catalog</h2>
+          <div class="search-wrap" style="margin-top:8px;">
+            <svg class="search-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input class="ios-input" id="custSearchInput" type="text" placeholder="Search Product..." style="padding-left:38px;padding-right:36px;" />
+            <button type="button" class="search-clear-btn" id="custSearchClear" aria-label="Hapus pencarian">&times;</button>
+          </div>
+          <div class="cat-chips" id="custCatChips">
+            <button type="button" class="cat-chip active" data-cat="All">All</button>
+            <button type="button" class="cat-chip" data-cat="Keychain">Keychain</button>
+            <button type="button" class="cat-chip" data-cat="Doll">Doll</button>
+            <button type="button" class="cat-chip" data-cat="Pin">Pin</button>
+          </div>
+          <div id="custCatalogList"></div>
+        </section>
+
+        <!-- ==================== SLIDE 38: PAYMENT QR ==================== -->
+        <section class="screen" id="screen-payment">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="customer-catalog">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <span class="glass-badge" id="qrCountdown">04:59</span>
+          </div>
+          <h2 class="screen-title">Payment</h2>
+
+          <div class="glass-card" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:14px;padding:22px 18px;margin-top:6px;">
+            <div style="width:100%;display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid rgba(24,24,27,0.08);">
+              <span style="font-size:13.5px;color:var(--muted);font-weight:600;">Total payment</span>
+              <strong id="paymentTotalAmount" style="font-size:20px;color:var(--ink);">Rp15,000</strong>
+            </div>
+
+            <div style="text-align:center;">
+              <div style="font-size:16px;font-weight:800;margin-bottom:12px;">Scan to Pay</div>
+              <div class="qr-wrap">
+                <div class="qr-laser"></div>
+                <svg width="186" height="186" viewBox="0 0 100 100" aria-label="QR Code">
+                  <rect width="100" height="100" fill="#FFF"/>
+                  <rect x="6" y="6" width="24" height="24" rx="3" fill="none" stroke="#18181B" stroke-width="4.5"/>
+                  <rect x="13" y="13" width="10" height="10" rx="1.5" fill="#18181B"/>
+                  <rect x="70" y="6" width="24" height="24" rx="3" fill="none" stroke="#18181B" stroke-width="4.5"/>
+                  <rect x="77" y="13" width="10" height="10" rx="1.5" fill="#18181B"/>
+                  <rect x="6" y="70" width="24" height="24" rx="3" fill="none" stroke="#18181B" stroke-width="4.5"/>
+                  <rect x="13" y="77" width="10" height="10" rx="1.5" fill="#18181B"/>
+                  <rect x="38" y="8" width="6" height="6" fill="#18181B"/><rect x="48" y="8" width="6" height="12" fill="#18181B"/>
+                  <rect x="58" y="14" width="6" height="12" fill="#18181B"/><rect x="38" y="20" width="10" height="6" fill="#18181B"/>
+                  <rect x="8" y="38" width="12" height="6" fill="#18181B"/><rect x="24" y="38" width="6" height="18" fill="#18181B"/>
+                  <rect x="8" y="52" width="10" height="10" fill="#18181B"/><rect x="70" y="38" width="12" height="6" fill="#18181B"/>
+                  <rect x="86" y="38" width="8" height="18" fill="#18181B"/><rect x="70" y="52" width="10" height="10" fill="#18181B"/>
+                  <rect x="38" y="72" width="10" height="6" fill="#18181B"/><rect x="54" y="72" width="12" height="6" fill="#18181B"/>
+                  <rect x="38" y="84" width="18" height="10" fill="#18181B"/><rect x="62" y="82" width="8" height="12" fill="#18181B"/>
+                  <rect x="78" y="74" width="14" height="18" fill="#18181B"/>
+                  <circle cx="50" cy="50" r="16" fill="#FFF"/>
+                  <circle cx="50" cy="50" r="12" fill="#18181B"/>
+                  <text x="50" y="54" text-anchor="middle" font-size="11" font-weight="800" fill="#FDE047">UI</text>
+                </svg>
+              </div>
+              <div style="font-size:12.5px;color:var(--muted);margin-top:10px;">Scan this QR code with QRIS</div>
+            </div>
+
+            <button type="button" class="ios-btn ios-btn-primary" id="paymentDoneBtn">Done</button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 39: CUSTOMER PURCHASE HISTORY ==================== -->
+        <section class="screen" id="screen-customer-history">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="home">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <button type="button" class="back-pill" id="clearAllCustHistBtn" style="color:var(--danger);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+              <span>Clear</span>
+            </button>
+          </div>
+          <h2 class="screen-title">Purchase History</h2>
+          <div class="ios-seg cols-4" id="custHistoryTabs">
+            <button type="button" class="ios-seg-btn active" data-htab="all">All</button>
+            <button type="button" class="ios-seg-btn" data-htab="processed">Proses</button>
+            <button type="button" class="ios-seg-btn" data-htab="finished">Selesai</button>
+            <button type="button" class="ios-seg-btn" data-htab="chats">Chat Seller</button>
+          </div>
+          <div id="custHistoryList"></div>
+        </section>
+        <!-- ==================== CUSTOMER LIKED / FAVORITE PRODUCTS ==================== -->
+        <section class="screen" id="screen-customer-favorites">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="home">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <span class="glass-badge" id="favTotalBadge">0 Produk</span>
+          </div>
+          <h2 class="screen-title">Produk Disukai</h2>
+          <p class="screen-sub">Daftar merchandise favorit yang Anda tandai</p>
+          <div class="grid-2" id="customerFavoritesGrid"></div>
+        </section>
+
+
+        <!-- ==================== SLIDE 41: SELLER CATALOGS HUB ==================== -->
+        <section class="screen" id="screen-seller-catalogs-hub">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="home">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">Catalogs</h2>
+          <p class="screen-sub">Kelola seluruh produk organisasi &amp; unggah rilisan terbaru</p>
+
+          <div class="grid-2" style="margin-top:10px;margin-bottom:14px;">
+            <button type="button" class="role-glass-card" data-nav="seller-catalog">
+              <div class="ios-icon-squircle sm navy" style="width:62px;height:62px;border-radius:20px;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <div style="font-size:14px;font-weight:800;">Product</div>
+              <div style="font-size:11px;color:var(--muted);">Edit stok &amp; harga</div>
+            </button>
+
+            <button type="button" class="role-glass-card" data-nav="seller-add-product">
+              <div class="ios-icon-squircle sm" style="width:62px;height:62px;border-radius:20px;background:var(--grad-gold);">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </div>
+              <div style="font-size:14px;font-weight:800;">Add New Product</div>
+              <div style="font-size:11px;color:var(--muted);">Tambah merch baru</div>
+            </button>
+          </div>
+
+          <div style="display:flex;justify-content:center;">
+            <button type="button" class="role-glass-card" data-nav="seller-promo" style="width:100%;flex-direction:row;text-align:left;padding:14px 16px;">
+              <div class="ios-icon-squircle sm emerald" style="width:54px;height:54px;border-radius:18px;margin:0;flex-shrink:0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div>
+                <div style="font-size:14.5px;font-weight:800;">New Arrivals &amp; Add Banner</div>
+                <div style="font-size:11.5px;color:var(--muted);">Atur banner promosi yang tampil di Beranda</div>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 42: SELLER PRODUCT CATALOG ==================== -->
+        <section class="screen" id="screen-seller-catalog">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="seller-catalogs-hub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <button type="button" class="ios-btn ios-btn-primary ios-btn-sm" data-nav="seller-add-product">+ Add New</button>
+          </div>
+          <h2 class="screen-title">Product Catalog</h2>
+          <div class="search-wrap" style="margin-top:8px;">
+            <svg class="search-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input class="ios-input" id="sellerSearchInput" type="text" placeholder="Search Product..." style="padding-left:38px;" />
+          </div>
+          <div id="sellerCatalogList"></div>
+          <button type="button" class="ios-btn ios-btn-primary" data-nav="seller-add-product" style="margin-top:8px;">+ Add New Product</button>
+        </section>
+
+        <!-- ==================== SLIDE 43: CATALOG PRODUCT EDIT ==================== -->
+        <section class="screen" id="screen-seller-edit-product">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="seller-catalog">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">Catalog Product</h2>
+
+          <form class="glass-card" id="editProductForm" style="display:flex;flex-direction:column;gap:12px;margin-top:6px;">
+            <div style="display:flex;gap:14px;align-items:center;">
+              <img id="editProdImg" src="images/prod_plushie_b.jpg" alt="Produk" style="width:94px;height:94px;border-radius:18px;object-fit:cover;background:#FFF;box-shadow:var(--glass-shadow-sm);" />
+              <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+                <div style="font-size:11.5px;color:var(--muted);font-weight:600;">Seller</div>
+                <strong id="editProdSellerLabel" style="font-size:15px;">Organisasi A</strong>
+                <input type="file" id="editProdFileInput" accept="image/*" style="display:none;" /><button type="button" class="ios-btn ios-btn-glass ios-btn-sm" id="cycleEditImgBtn">Upload Foto Baru</button>
+              </div>
+            </div>
+
+            <div class="field-group" style="margin:0;"><label class="field-label" for="editProdName">Product name</label><input class="ios-input" id="editProdName" type="text" required /></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div class="field-group" style="margin:0;"><label class="field-label" for="editProdPrice">Price</label><input class="ios-input" id="editProdPrice" type="number" min="0" required /></div>
+              <div class="field-group" style="margin:0;"><label class="field-label" for="editProdStock">Stock</label><input class="ios-input" id="editProdStock" type="number" min="0" required /></div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div class="field-group" style="margin:0;">
+                <label class="field-label" for="editProdCategory">Category</label>
+                <select class="ios-select" id="editProdCategory">
+                  <option value="Doll">Doll</option><option value="Keychain">Keychain</option><option value="Pin">Pin</option><option value="Tumbler">Tumbler</option><option value="Sticker">Sticker</option>
+                </select>
+              </div>
+              <div class="field-group" style="margin:0;">
+                <label class="field-label" for="editProdStatus">Status</label>
+                <select class="ios-select" id="editProdStatus">
+                  <option value="Published">Published</option><option value="Draft">Draft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group" style="margin:0;"><label class="field-label" for="editProdDesc">Description</label><textarea class="ios-textarea" id="editProdDesc" placeholder="Write product descriptions..."></textarea></div>
+            <button type="submit" class="ios-btn ios-btn-primary">Save Changes</button>
+          </form>
+        </section>
+
+        <!-- ==================== SLIDE 44: NEW PRODUCT ==================== -->
+        <section class="screen" id="screen-seller-add-product">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="seller-catalogs-hub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">New Product</h2>
+
+          <form class="glass-card" id="addProductForm" style="display:flex;flex-direction:column;gap:11px;margin-top:8px;">
+            <div class="field-group" style="margin:0;"><label class="field-label" for="addProdName">Product Name</label><input class="ios-input" id="addProdName" type="text" placeholder="Enter Product Name" required /></div>
+            <div class="field-group" style="margin:0;">
+              <label class="field-label" for="addProdCategory">Category</label>
+              <select class="ios-select" id="addProdCategory">
+                <option value="Keychain">Keychain</option><option value="Doll">Doll</option><option value="Pin">Pin</option><option value="Tumbler">Tumbler</option><option value="Sticker">Sticker</option>
+              </select>
+            </div>
+            <div class="field-group" style="margin:0;"><label class="field-label" for="addProdPrice">Price</label><input class="ios-input" id="addProdPrice" type="number" min="0" placeholder="Rp0,00" required /></div>
+            <div class="field-group" style="margin:0;"><label class="field-label" for="addProdDesc">Description</label><input class="ios-input" id="addProdDesc" type="text" placeholder="Describe your product in detail" /></div>
+            <div class="field-group" style="margin:0;">
+              <span class="field-label">IMAGE UPLOAD</span>
+              <input type="file" id="addProdFileInput" accept="image/*" style="display:none;" />
+              <button type="button" id="addUploadBtn" style="width:100%;padding:16px;border-radius:16px;background:rgba(255,255,255,0.65);border:1.5px dashed rgba(24,24,27,0.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:13px;color:var(--ink-soft);">
+                <img id="addProdPreviewImg" alt="Preview foto produk" style="display:none;width:110px;height:110px;object-fit:cover;border-radius:14px;box-shadow:var(--glass-shadow-sm);" />
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span id="addUploadLabel">Tambah Foto dari Perangkat</span>
+                </div>
+              </button>
+            </div>
+            <button type="submit" class="ios-btn ios-btn-primary" style="margin-top:6px;">Add</button>
+          </form>
+        </section>
+
+        <!-- ==================== SLIDE 50: SELLER RESULT ==================== -->
+        <section class="screen" id="screen-seller-result">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="home">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <span class="glass-badge">Merchant</span>
+          </div>
+          <h2 class="screen-title">Result</h2>
+
+          <div class="glass-card" style="display:flex;align-items:center;gap:12px;padding:12px 14px;margin-top:4px;">
+            <div class="ios-icon-squircle sm navy" style="margin:0;border-radius:50%;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:15px;font-weight:800;">Store Name</div>
+              <div style="font-size:12px;color:var(--muted);font-weight:600;">Owner / Merchant</div>
+            </div>
+          </div>
+
+          <div class="kpi-grid-2">
+            <div class="kpi-card"><div class="kpi-label">New Order</div><div class="kpi-val" id="kpiNewOrder">0</div></div>
+            <div class="kpi-card"><div class="kpi-label">Sold Today</div><div class="kpi-val" id="kpiSoldToday">0</div></div>
+            <div class="kpi-card"><div class="kpi-label">Transactions today</div><div class="kpi-val" id="kpiTxToday">0</div></div>
+            <div class="kpi-card"><div class="kpi-label">Products listed</div><div class="kpi-val" id="kpiProdListed">5</div></div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 2px 10px;">
+            <strong style="font-size:14.5px;">Needs your review</strong>
+            <button type="button" class="text-link" style="color:var(--accent-gold);font-weight:700;" data-nav="seller-history-hub">View all &rsaquo;</button>
+          </div>
+
+          <div class="review-card">
+            <div>
+              <div style="font-size:13px;font-weight:800;">REQ-001 &middot; Ready to Ship</div>
+              <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Deadline &middot; 28/11/2026</div>
+            </div>
+            <button type="button" class="ios-btn ios-btn-gold ios-btn-sm" id="processReqBtn">Process Now</button>
+          </div>
+
+          <div class="review-card">
+            <div>
+              <div style="font-size:13px;font-weight:800;">REQ-002 &middot; New Chat</div>
+              <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Inquiry about stock availability</div>
+            </div>
+            <button type="button" class="ios-btn ios-btn-glass ios-btn-sm" id="replyChatBtn">Unreplied</button>
+          </div>
+        </section>
+
+        <!-- ==================== SLIDE 51: HISTORY HUB ==================== -->
+        <section class="screen" id="screen-seller-history-hub">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="seller-result">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">History</h2>
+          <p class="screen-sub">View all your shopping and payment history, here!</p>
+
+          <div class="grid-2" style="margin-bottom:14px;">
+            <button type="button" class="role-glass-card" data-nav="seller-purchases">
+              <div class="ios-icon-squircle sm navy" style="width:62px;height:62px;border-radius:20px;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+              <div style="font-size:14px;font-weight:800;">Purchases</div>
+            </button>
+
+            <button type="button" class="role-glass-card" data-nav="seller-payments">
+              <div class="ios-icon-squircle sm" style="width:62px;height:62px;border-radius:20px;background:var(--grad-gold);">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
+              <div style="font-size:14px;font-weight:800;">Payments</div>
+            </button>
+          </div>
+
+
+        </section>
+
+        <!-- ==================== SLIDE 52: PURCHASES HISTORY ==================== -->
+        <section class="screen" id="screen-seller-purchases">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="seller-history-hub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <div style="display:flex;gap:6px;">
+              <button type="button" class="back-pill" id="togglePurchSearchBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Search</span>
+              </button>
+              <button type="button" class="back-pill" id="clearAllSellerPurchBtn" style="color:var(--danger);">
+                <span>Clear</span>
+              </button>
+            </div>
+          </div>
+          <h2 class="screen-title">Purchases History</h2>
+          <input class="ios-input" id="sellerPurchSearch" type="text" placeholder="Search date or item..." style="display:none;margin:8px 0;" />
+          <div class="ios-seg" id="sellerPurchTabs">
+            <button type="button" class="ios-seg-btn active" data-sptab="all">All Orders</button>
+            <button type="button" class="ios-seg-btn" data-sptab="processed">On Processed</button>
+            <button type="button" class="ios-seg-btn" data-sptab="finished">Finished</button>
+          </div>
+          <div id="sellerPurchasesList" style="display:flex;flex-direction:column;gap:12px;"></div>
+        </section>
+
+        <!-- ==================== SLIDE 53: PAYMENTS HISTORY ==================== -->
+        <section class="screen" id="screen-seller-payments">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="seller-history-hub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+            <div style="display:flex;gap:6px;">
+              <button type="button" class="back-pill" id="togglePaySearchBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Search</span>
+              </button>
+              <button type="button" class="back-pill" id="clearAllSellerPayBtn" style="color:var(--danger);">
+                <span>Clear</span>
+              </button>
+            </div>
+          </div>
+          <h2 class="screen-title">Payments History</h2>
+          <input class="ios-input" id="sellerPaySearch" type="text" placeholder="Search date or auth code..." style="display:none;margin:8px 0;" />
+          <div id="sellerPaymentsList" style="display:flex;flex-direction:column;gap:14px;margin-top:8px;"></div>
+        </section>
+
+        <!-- ==================== SLIDE 54: FAQ ==================== -->
+        <section class="screen" id="screen-faq">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" id="faqBackBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">FAQ</h2>
+          <p class="screen-sub">Frequently Ask Question — Bantuan Aplikasi GetmerchUI</p>
+
+          <div class="faq-card">
+            <button type="button" class="faq-header">
+              <span>Bagamana cara menjadi custumor?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body">
+              <ol>
+                <li>Pencet icon sign in</li>
+                <li>Masukan data yang diperlukan</li>
+                <li>Sesuaikan data profil</li>
+                <li>Anda sudah dapat melakukan transaksi</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button type="button" class="faq-header">
+              <span>Bagaimana cara menambahkan produk untuk dijual?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body">
+              <ol>
+                <li>Sign sebagai seller</li>
+                <li>Add new produk</li>
+                <li>Masukan produk event Anda</li>
+                <li>Anda sudah bisa mulai berjualan</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button type="button" class="faq-header">
+              <span>Bagaimana cara ikut promosi di Instagram?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-body">
+              <ol>
+                <li>Hubungi Getmerchui lewat DM Instagram</li>
+                <li>Isi form untuk ikut promosi</li>
+                <li>Pembayaran</li>
+              </ol>
+            </div>
+          </div>
+
+
+        </section>
+
+        <!-- ==================== SLIDE 55: PRODUCT PROMOTION EDIT ==================== -->
+        <section class="screen" id="screen-seller-promo">
+          <div class="top-nav-row">
+            <button type="button" class="back-pill" data-back="seller-catalogs-hub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back</span>
+            </button>
+          </div>
+          <h2 class="screen-title">Product Promotion Edit</h2>
+
+          <div class="glass-card" style="padding:10px;margin:6px 0 12px;">
+            <div style="font-size:10px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Live Preview Banner Beranda</div>
+            <div style="position:relative;border-radius:14px;overflow:hidden;">
+              <img id="promoPreviewImg" src="images/ios_banner.jpg" alt="Preview Banner" style="width:100%;height:96px;object-fit:cover;" />
+              <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,24,27,0.62),rgba(24,24,27,0.1));display:flex;align-items:flex-end;padding:10px 12px;">
+                <div id="promoLivePreview" style="font-size:12px;font-weight:700;color:#FFF;">Produk A — New Arrival (20/05/2027 – 27/05/2027)</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="glass-card" id="promoEditForm" style="display:flex;flex-direction:column;gap:12px;">
+            <div class="field-group" style="margin:0;"><label class="field-label" for="promoProduct">Product</label><input class="ios-input" id="promoProduct" type="text" value="Produk A" required /></div>
+            <div class="field-group" style="margin:0;"><label class="field-label" for="promoTitle">Promotion title</label><input class="ios-input" id="promoTitle" type="text" value="New Arrival" required /></div>
+
+            <div style="background:rgba(255,255,255,0.65);border:1.5px dashed rgba(24,24,27,0.25);border-radius:16px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+              <div>
+                <div style="font-size:13.5px;font-weight:700;">Promotion banner</div>
+                <div style="font-size:12px;color:var(--muted);">JPG or PNG</div>
+              </div>
+              <input type="file" id="promoFileInput" accept="image/*" style="display:none;" />
+              <button type="button" class="ios-btn ios-btn-glass ios-btn-sm" id="promoUploadBtn">
+                <span id="promoUploadLabel">Upload</span>
+              </button>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div class="field-group" style="margin:0;"><label class="field-label" for="promoStart">Display start</label><input class="ios-input" id="promoStart" type="text" value="20/05/2027" required /></div>
+              <div class="field-group" style="margin:0;"><label class="field-label" for="promoEnd">Display end</label><input class="ios-input" id="promoEnd" type="text" value="27/05/2027" required /></div>
+            </div>
+
+            <button type="submit" class="ios-btn ios-btn-primary" style="margin-top:4px;">Save Changes</button>
+          </form>
+        </section>
+
+      </div><!-- /viewport -->
+
+      <!-- ==================== FLOATING iOS LIQUID GLASS BOTTOM DOCK ==================== -->
+      <div class="bottom-dock-wrap" id="bottomDockWrap">
+        <nav class="bottom-nav" id="bottomNav" aria-label="Navigasi Bawah">
+          <button type="button" class="bnav-item active" data-bnav="home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Home</span>
+          </button>
+          <button type="button" class="bnav-item" data-bnav="catalogs">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+            <span>Catalogs</span>
+          </button>
+          <button type="button" class="bnav-item" data-bnav="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><line x1="20" y1="20" x2="16.5" y2="16.5"/></svg>
+            <span>Search</span>
+          </button>
+          <button type="button" class="bnav-item" data-bnav="fourth">
+            <span class="nav-badge" id="fourthBadge">1</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+            <span id="bnavFourthLabel">History</span>
+          </button>
+          <button type="button" class="bnav-item" data-bnav="profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Profil</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Modal / Bottom Sheet Overlay -->
+      <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+        <div id="modalContainer" style="width:100%;display:flex;justify-content:center;"></div>
+      </div>
+
+      <div class="toast" id="toastEl">Tersimpan</div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
